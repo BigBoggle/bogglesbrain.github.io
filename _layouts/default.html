@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="Boggle's Brain" content="I am not a web developer." />
+    <meta name="author" content="Boggle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
+
+    <!-- Javascript -->
+    <script
+      src="https://kit.fontawesome.com/118610d194.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>{{ page.title | default: "Boggle's Brain" }}</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a class="navbar-link" href="{{ '/pages/about.html' | relative_url }}"
+        >About me</a
+      >
+      <a class="navbar-link" href="{{ '/pages/projects.html' | relative_url }}"
+        >Projects</a
+      >
+      <a class="navbar-link" href="{{ '/pages/learning.html' | relative_url }}"
+        >Things I'm learning</a
+      >
+    </div>
+
+    {{ content }}
+  </body>
+</html>

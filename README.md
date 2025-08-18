@@ -3,4 +3,4 @@
 TODO: 
 ___
 
-- [ ] Find a way to inherit html head data
+- [ ] Get a custom domain for the site
