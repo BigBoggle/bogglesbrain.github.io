@@ -9,6 +9,7 @@ of Kentucky. I switched to Linux about a year ago and never looked back.
 
 ### Tech I Use
 
-- Thinkpad T480
-
-
+## My preferred languages
+- C/C++
+- Python
+- English
