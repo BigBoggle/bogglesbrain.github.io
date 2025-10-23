@@ -1,5 +1,5 @@
 title: "Boggle's Brain"
-baseurl: ""
+baseurl: "/bogglesbrain.github.io"
 theme: null
 
 # Plugins 
@@ -10,8 +10,6 @@ titles_from_headings:
   enabled:     true
   strip_title: false
   collections: false
-
-
 
 navbar:
   - title: Home
