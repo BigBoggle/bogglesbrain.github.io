@@ -1,0 +1,50 @@
+h1 {
+  padding-left: 50px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-title {
+  font-size: 26px;
+}
+.post-date {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  text-align: right;
+}
+
+.post-description {
+  /* something */
+  font-size: 16px;
+}
+
+.post-content {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
+}
+
+.post-thumbnail {
+  max-width: 90vw; /* don't exceed 90% of the viewport width */
+  max-height: 50vh; /* don't exceed half the screen height */
+  height: auto; /* preserve aspect ratio */
+  width: auto; /* preserve aspect ratio */
+  display: flex;
+  object-fit: contain; /* ensure the whole image stays visible */
+  margin: 0.5em auto 0.25em auto; /* small top/bottom margins */
+  border: 2px solid #800000;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post-thumbnail:hover,
+.post-thumbnail:focus {
+  border-color: #ce2029;
+  box-shadow: 0 0 12px rgba(206, 32, 41, 0.4);
+}

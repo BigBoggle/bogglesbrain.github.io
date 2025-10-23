@@ -1,7 +1,12 @@
 ---
 layout: default
-title: Projects
+title: Project Showcase
 ---
 
-## Here are some projects that I have made (most are unfinished)
+##  Here is a comprehensive list of everything I've made.
+
+[Custom Neovim Color Scheme to match my Linux Desktop](https://github.com/BigBoggle/siva.nvim) 
+
+
+
 

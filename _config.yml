@@ -1,0 +1,22 @@
+title: "Boggle's Brain"
+baseurl: ""
+theme: null
+
+# Plugins 
+plugins:
+  - jekyll-titles-from-headings
+
+titles_from_headings:
+  enabled:     true
+  strip_title: false
+  collections: false
+
+
+
+navbar:
+  - title: Home
+    url: "/"
+  - title: Projects
+    url: "/pages/projects.html"
+  - title: Blog
+    url: "/pages/blog.html"

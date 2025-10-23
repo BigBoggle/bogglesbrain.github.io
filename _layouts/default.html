@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/blog.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/code.css' | relative_url }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
 
     <!-- Javascript -->
     <script
@@ -24,18 +26,18 @@
     <title>{{ page.title | default: "Boggle's Brain" }}</title>
   </head>
   <body>
+      <h1> Welcome to Boggle's Brain </h1>
     <div class="navbar">
-      <a class="navbar-link" href="{{ 'index.html' | relative_url }}">Home</a>
-      <a class="navbar-link" href="{{ '/pages/about.html' | relative_url }}"
-        >About me</a
+      {% for item in site.navbar %} {% assign link_url = item.url | relative_url
+      %}
+      <a
+        class="navbar-link {% if page.url == link_url %}active{% endif %}"
+        href="{{ link_url }}"
+        >{{ item.title }}</a
       >
-      <a class="navbar-link" href="{{ '/pages/projects.html' | relative_url }}"
-        >Projects</a
-      >
-      <a class="navbar-link" href="{{ '/pages/blog.html' | relative_url }}"
-        >Blog</a
-      >
+      {% endfor %}
     </div>
+          <hr>
 
     {{ content }}
   </body>

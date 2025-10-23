@@ -1,0 +1,327 @@
+/* Code block highlights to match my neovim color scheme */
+
+/* Siva Colorscheme for Markdown Code Blocks */
+/* TODO: Clean this up later */
+
+:root {
+  --foreground: #e9d9d9;
+  --background: #101010;
+  --backgroundish: #101011;
+
+  --salmon-light: #f5a5a5;
+  --salmon: #e06666;
+  --error: #d22f32;
+  --crimson: #dc143c;
+  --fire-engine: #ce2029;
+  --maroonish: #a62b2b;
+  --light-maroon: #900000;
+  --maroon: #800000;
+  --darker-maroon: #700000;
+
+  --bright-red: #b10000;
+  --bright3: #f6c2a5;
+  --bright2: #ea9a7d;
+  --bright1: #e16a5e;
+  --orangeish: #e25822;
+}
+
+/* General Code Block Styling */
+pre code,
+code {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.95em;
+  border-radius: 0.5rem;
+  padding: 0.75em 1em;
+  display: block;
+  line-height: 1.5;
+  overflow-x: auto;
+  border: 1px solid var(--fire-engine);
+}
+
+/* Inline code */
+p code,
+li code {
+  display: inline;
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  background-color: var(--backgroundish);
+  border: 1px solid var(--maroonish);
+  color: var(--bright1);
+}
+
+/* Syntax Highlighting */
+
+/* Keywords, control flow, return, if, else */
+.token.keyword,
+.token.control,
+.token.conditional,
+.token.return {
+  color: var(--fire-engine);
+  font-weight: 600;
+}
+
+/* Functions and methods */
+.token.function {
+  color: var(--bright-red);
+  font-weight: 500;
+}
+
+/* Variables and identifiers */
+.token.variable,
+.token.identifier {
+  color: var(--salmon);
+}
+
+/* Constants, enums */
+.token.constant {
+  color: var(--maroonish);
+}
+
+/* Strings */
+.token.string {
+  color: var(--salmon);
+}
+
+/* Numbers and booleans */
+.token.number,
+.token.boolean {
+  color: var(--bright2);
+}
+
+/* Operators and punctuation */
+.token.operator,
+.token.punctuation {
+  color: var(--maroonish);
+}
+
+/* Comments */
+.token.comment {
+  color: var(--salmon-light);
+  font-style: italic;
+}
+
+/* Type definitions, classes */
+.token.type,
+.token.class-name {
+  color: var(--crimson);
+}
+
+/* Errors */
+.token.error {
+  color: var(--error);
+  background-color: rgba(206, 32, 41, 0.15);
+  border-bottom: 1px solid var(--fire-engine);
+}
+
+/* Warnings, hints, etc. */
+.token.warning {
+  color: var(--orangeish);
+}
+.token.info {
+  color: var(--salmon);
+}
+.token.hint {
+  color: var(--bright2);
+}
+
+/* Matching parentheses or highlights */
+.token.highlight,
+.token.match {
+  background-color: var(--maroon);
+  color: var(--foreground);
+  border-radius: 0.2em;
+  padding: 0 0.1em;
+}
+
+/* Diff-style Git highlighting */
+.token.inserted {
+  color: var(--orangeish);
+}
+.token.deleted {
+  color: var(--fire-engine);
+}
+
+/* Line numbers (for code fences with line numbering) */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.5em;
+}
+pre.line-numbers > code {
+  counter-reset: linenumber;
+}
+.line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 0.9em;
+  left: 0;
+  width: 3em;
+  user-select: none;
+  text-align: right;
+  color: var(--fire-engine);
+  border-right: 1px solid var(--maroonish);
+  padding-right: 0.5em;
+}
+.line-numbers-rows > span::before {
+  counter-increment: linenumber;
+  content: counter(linenumber);
+  display: block;
+}
+
+.highlight .c,    /* Comment */
+.highlight .cm,   /* Comment.Multiline */
+.highlight .cp,   /* Comment.Preproc */
+.highlight .c1,   /* Comment.Single */
+.highlight .cs {
+  /* Comment.Special */
+  color: #f5a5a5; /* salmon_light */
+  font-style: italic;
+}
+
+.highlight .k,    /* Keyword */
+.highlight .kc,   /* Keyword.Constant */
+.highlight .kd,   /* Keyword.Declaration */
+.highlight .kn,   /* Keyword.Namespace */
+.highlight .kp,   /* Keyword.Pseudo */
+.highlight .kr,   /* Keyword.Reserved */
+.highlight .kt {
+  /* Keyword.Type */
+  color: #ce2029; /* fire_engine */
+  font-weight: 600;
+}
+
+/* Functions */
+.highlight .nf,   /* Name.Function */
+.highlight .fm {
+  /* Function.Method */
+  color: #b10000; /* bright_red */
+  font-weight: 500;
+}
+
+/* Variables and identifiers */
+.highlight .n,    /* Name */
+.highlight .na,   /* Name.Attribute */
+.highlight .nb,   /* Name.Builtin */
+.highlight .bp,   /* Name.Builtin.Pseudo */
+.highlight .ni,   /* Name.Entity */
+.highlight .nl,   /* Name.Label */
+.highlight .nx,   /* Name.Other */
+.highlight .py,   /* Name.Property */
+.highlight .nt,   /* Name.Tag */
+.highlight .nv,   /* Name.Variable */
+.highlight .vc,   /* Name.Variable.Class */
+.highlight .vg,   /* Name.Variable.Global */
+.highlight .vi {
+  /* Name.Variable.Instance */
+  color: var(--fire-engine);
+}
+
+/* Constants, enums, builtins */
+.highlight .no,   /* Name.Constant */
+.highlight .kc,   /* Keyword.Constant */
+.highlight .l,    /* Literal */
+.highlight .ld,   /* Literal.Date */
+.highlight .ss {
+  /* Literal.String.Symbol */
+  color: #a62b2b; /* maroonish */
+}
+
+/* Strings */
+.highlight .s,    /* Literal.String */
+.highlight .sb,   /* Literal.String.Backtick */
+.highlight .sc,   /* Literal.String.Char */
+.highlight .sd,   /* Literal.String.Doc */
+.highlight .s2,   /* Literal.String.Double */
+.highlight .sh,   /* Literal.String.Heredoc */
+.highlight .si,   /* Literal.String.Interpol */
+.highlight .sx,   /* Literal.String.Other */
+.highlight .sr,   /* Literal.String.Regex */
+.highlight .s1,   /* Literal.String.Single */
+.highlight .se {
+  /* Literal.String.Escape */
+  color: #e06666; /* salmon */
+}
+
+/* Numbers, booleans */
+.highlight .m,    /* Literal.Number */
+.highlight .mb,   /* Literal.Number.Bin */
+.highlight .mf,   /* Literal.Number.Float */
+.highlight .mh,   /* Literal.Number.Hex */
+.highlight .mi,   /* Literal.Number.Integer */
+.highlight .il,   /* Literal.Number.Long */
+.highlight .mo,   /* Literal.Number.Oct */
+.highlight .kc,   /* Keyword.Constant */
+.highlight .kp {
+  /* Keyword.Pseudo */
+  color: #ea9a7d; /* bright2 */
+}
+
+/* Operators and punctuation */
+.highlight .o,    /* Operator */
+.highlight .ow,   /* Operator.Word */
+.highlight .p {
+  /* Punctuation */
+  color: var(--foreground); /* maroonish */
+}
+
+/* Types, classes */
+.highlight .nc,   /* Name.Class */
+.highlight .nn,   /* Name.Namespace */
+.highlight .nt {
+  /* Name.Tag */
+  color: #dc143c; /* crimson */
+}
+
+/* Errors */
+.highlight .err {
+  color: #d22f32; /* error */
+  background-color: rgba(206, 32, 41, 0.15);
+  border-bottom: 1px solid #ce2029;
+}
+
+/* Hints, info, warnings (optional Rouge annotations) */
+.highlight .gi {
+  color: #e25822;
+} /* Added / Diff inserted */
+.highlight .gd {
+  color: #ce2029;
+} /* Deleted / Diff removed */
+.highlight .gh {
+  color: #e9d9d9;
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #e9d9d9;
+}
+.highlight .go {
+  color: #ea9a7d;
+} /* Output / hint */
+.highlight .gp {
+  color: #e16a5e;
+} /* Prompt */
+
+/* Highlighted Line (Rouge uses .hll) */
+.highlight .hll {
+  background-color: #800000; /* maroon */
+}
+
+/* Line numbers (if enabled) */
+.highlight table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.highlight td {
+  padding: 0;
+}
+.highlight .gutter {
+  user-select: none;
+  color: #ce2029;
+  text-align: right;
+  padding-right: 1em;
+  border-right: 1px solid #a62b2b;
+}
+.highlight .code {
+  padding-left: 1em;
+}

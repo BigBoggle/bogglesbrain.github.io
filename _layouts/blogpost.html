@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/blog.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/code.css' | relative_url }}" />
+    <title>{{ page.title }} | Boggle's Brain</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <!-- Post container -->
+    <main class="post-container">
+      <article class="blog-post">
+        <header class="post-header">
+
+
+
+    <div class="navbar">
+      {% for item in site.navbar %} {% assign link_url = item.url | relative_url
+      %}
+      <a
+        class="navbar-link {% if page.url == link_url %}active{% endif %}"
+        href="{{ link_url }}"
+        >{{ item.title }}</a
+      >
+      {% endfor %}
+    </div>
+
+          <h1>{{ page.title }}</h1>
+          {% if page.date %}
+          <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
+          {% endif %}
+        </header>
+
+        <hr class="rounded">
+        <!-- Tags -->
+        {% if page.tags %}
+        <span class="post-tags">
+            {% for tag in page.tags %}
+            <a class="post-tags-link">#{{ tag }}</a>
+            {% endfor %}
+        </span>
+        {% endif %}
+        <hr class="rounded">
+        <section class="post-content">{{ content }}</section>
+
+        <footer>
+          <!--
+          <p>
+            <a href="{{ '/pages/blog.html' | relative_url }}">← Back to Blog</a>
+          </p>
+          -->
+
+          {% if site.posts.size > 1 %}
+          <h3>More Posts</h3>
+        <hr class="solid">
+          <ul class="other-posts">
+            {% for post in site.posts %} 
+                {% if post.url != page.url %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %} 
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
