@@ -6,6 +6,12 @@ theme: null
 plugins:
   - jekyll-titles-from-headings
 
+# Blog Folder Override
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name/
+
 titles_from_headings:
   enabled:     true
   strip_title: false

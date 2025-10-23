@@ -5,15 +5,14 @@ title: Blog
 
 ## Blog Posts
 
-{% assign posts = site.pages | where_exp: "p", "p.path contains 'blog/'" %}
-{% assign sorted_posts = posts | sort: "date" | reverse %}
+{% assign sorted_posts = site.blog | sort: "date" | reverse %}
 
 <ul>
   {% if sorted_posts.size > 0 %}
     {% for post in sorted_posts %}
       <li class="blog-entry">
         <div class="post-header">
-          <a class="post-title" href="{{ post.url }}"><b>{{ post.title }}</b></a>
+          <a class="post-title" href="{{ post.url | relative_url }}"><b>{{ post.title }}</b></a>
           {% if post.date %}
             <span class="post-date">— {{ post.date | date: "%B %d, %Y" }}</span>
           {% endif %}
