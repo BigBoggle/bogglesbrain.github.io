@@ -18,9 +18,13 @@ titles_from_headings:
   collections: false
 
 navbar:
-  - title: Home
+  - title: About
     url: "/"
   - title: Projects
     url: "/pages/projects.html"
   - title: Blog
     url: "/pages/blog.html"
+  - title: Contact
+    url: "/pages/contact.html"
+  - title: Tech
+    url: "/pages/tech.html"

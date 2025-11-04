@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Blogposts Overview
 ---
 
 ## Blog Posts

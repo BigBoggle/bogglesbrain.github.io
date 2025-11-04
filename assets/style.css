@@ -27,6 +27,12 @@ h3 {
   color: #f24b4b;
 }
 
+p {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
+}
+
 a,
 button {
   color: #a62b2b;
@@ -57,4 +63,8 @@ td {
 }
 tr {
   color: #d5d5d5;
+}
+
+li {
+  padding-top: 10px;
 }
