@@ -3,4 +3,4 @@
 TODO: 
 ___
 
-- [ ] Get a custom domain for the site
+- [x] Get a custom domain for the site

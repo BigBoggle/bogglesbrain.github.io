@@ -24,6 +24,6 @@ title: Project Showcase
 
 ### <u>In Progress</u>
 Some projects I have started, not cleaned up enough, or have barely gotten off the ground.
-- snake_eyes -> Teaching Pytorch to play Balatro.
-- perfection_complex -> a cyberdeck for the everyday.
+
+- TBD. 
 
